@@ -9,9 +9,9 @@ public class Product {
 
     private Product(Long id, ProductName name, ProductPrice price, ProductImageUrl imageUrl) {
         this.id = id;
-        this.name = name;
-        this.price = price;
-        this.imageUrl = imageUrl;
+        this.name = new ProductName(name);
+        this.price = new ProductPrice(price);
+        this.imageUrl = new ProductImageUrl(imageUrl);
     }
 
     public static Product create(Long id, String name, long price, String imageUrl) {
